@@ -6,6 +6,8 @@
     <modules>
         <module>tran-jdbc</module>
         <module>common</module>
+        <module>springboot-tx-jpa</module>
+        <module>springboot-tx-amqp</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
