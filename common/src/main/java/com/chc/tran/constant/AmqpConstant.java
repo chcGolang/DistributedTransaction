@@ -1,6 +1,5 @@
 package com.chc.tran.constant;
 
-import org.apache.logging.log4j.util.Strings;
 
 /**
  * @author chc

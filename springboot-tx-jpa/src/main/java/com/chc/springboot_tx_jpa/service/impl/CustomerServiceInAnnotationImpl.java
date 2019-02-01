@@ -20,7 +20,7 @@ public class CustomerServiceInAnnotationImpl implements CustomerServiceInAnnotat
     @Transactional(rollbackFor=Exception.class)
     public Customer create(Customer customer)throws Exception{
         Customer save = customerRepository.save(customer);
-        simulateError();
+        //simulateError();
         return save;
     }
 

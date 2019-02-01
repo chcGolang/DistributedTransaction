@@ -20,16 +20,16 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 public class ExampleExternalTransactionAmqpConfiguration {
 
-    public SimpleMessageListenerContainer messageListenerContainer() {
+    /*public SimpleMessageListenerContainer messageListenerContainer() {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
         SimpleRoutingConnectionFactory factory = new SimpleRoutingConnectionFactory();
         container.setTransactionManager(transactionManager(factory));
         container.setChannelTransacted(true);
         return container;
-    }
+    }*/
 
-    @Bean
-    public PlatformTransactionManager transactionManager(ConnectionFactory configuration) {
+    @Bean //PlatformTransactionManager
+    public RabbitTransactionManager rabbitTransactionManager(ConnectionFactory configuration) {
         return new RabbitTransactionManager(configuration);
     }
 
